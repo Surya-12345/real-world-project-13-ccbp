@@ -14,8 +14,12 @@ function App() {
   const search = "https://api.themoviedb.org/3/search/movie";
 
   useEffect(() => {
-    searchQuery()
-    fetchData()
+    if (userInput === ""){
+      fetchData()
+    }
+    else{
+      searchQuery()
+    }
     // eslint-disable-next-line
   },[page, userInput])
 
